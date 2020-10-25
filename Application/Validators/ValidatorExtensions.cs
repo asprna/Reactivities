@@ -8,7 +8,7 @@ namespace Application.Validators
         {
             var options = ruleBuilder
                 .NotEmpty()
-                .MaximumLength(6).WithMessage("lenth > 6")
+                .MinimumLength(6).WithMessage("length > 6")
                 .Matches("[A-Z]").WithMessage("Uppercase")
                 .Matches("[a-z]").WithMessage("lowercase")
                 .Matches("[0-9]").WithMessage("number")
